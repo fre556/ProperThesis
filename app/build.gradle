@@ -28,10 +28,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation files('libs/azure-mobile-android-3.4.0.jar')
-    implementation files('libs/ojdbc6.jar')
     implementation files('libs/jtds-1.2.7.jar')
-    implementation files('libs/jcifs-1.3.17.jar')
-    implementation files('libs/maven-ant-tasks-2.1.3.jar')
+
 }
 
 apply plugin: 'com.google.gms.google-services'

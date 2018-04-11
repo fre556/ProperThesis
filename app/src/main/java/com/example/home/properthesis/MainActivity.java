@@ -107,35 +107,6 @@ public class MainActivity extends AppCompatActivity {
             String userpassword = mPassword.getText().toString();
 
 
-            try {
-                    //String query = "select password from users where username='" + userid + "'";
-                   // Statement stmt = con.createStatement();
-                   // ResultSet rs = stmt.executeQuery(query);
-                String val1="test";
-                String val2="test";
-                String val3="test";
-                String val4="test";
-                String query = "insert into safetyfirst.dbo.users (username,email,password,status) values " +"(" + val1 + val2 + val3 + val4 ;
-                Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery(query);
-
-
-
-
-                        Toast.makeText(getApplicationContext(), "Problem",
-                                Toast.LENGTH_SHORT).show();
-
-
-                    /**
-                    String query2 = "select * from dbo.users where password='" + userpassword+ "'";
-                    Statement stmt2 = con.createStatement();
-                    ResultSet rs = stmt2.executeQuery(query2);
-                    **/
-
-
-            }catch (Exception e){
-
-            }
 
 
         }
