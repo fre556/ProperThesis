@@ -1,5 +1,6 @@
 package com.example.home.properthesis;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -97,47 +98,44 @@ public class MainActivity extends AppCompatActivity {
         mPassword =  findViewById(password);
 
     }
-        public void login (View v){
-
-        mPassword = (EditText) findViewById(password);
-
-        String userid=  muser.getText().toString();
-        String userpassword = mPassword.getText().toString();
 
 
-        Connection con = connection.CONN();
+        public  void signin (View v){
 
-        try{
-
-
-
-            if(con == null){
+            Connection con = connection.CONN();
+            String userid=  muser.getText().toString();
+            String userpassword = mPassword.getText().toString();
 
 
-                Toast.makeText(getApplicationContext(), "null",
-                        Toast.LENGTH_SHORT).show();
+            try {
+                    //String query = "select password from users where username='" + userid + "'";
+                   // Statement stmt = con.createStatement();
+                   // ResultSet rs = stmt.executeQuery(query);
+                String val1="test";
+                String val2="test";
+                String val3="test";
+                String val4="test";
+                String query = "insert into safetyfirst.dbo.users (username,email,password,status) values " +"(" + val1 + val2 + val3 + val4 ;
+                Statement stmt = con.createStatement();
+                ResultSet rs = stmt.executeQuery(query);
+
+
+
+
+                        Toast.makeText(getApplicationContext(), "Problem",
+                                Toast.LENGTH_SHORT).show();
+
+
+                    /**
+                    String query2 = "select * from dbo.users where password='" + userpassword+ "'";
+                    Statement stmt2 = con.createStatement();
+                    ResultSet rs = stmt2.executeQuery(query2);
+                    **/
+
+
+            }catch (Exception e){
+
             }
-            else{
-
-
-                String query1 = "select * from dbo.users where username='" + userid;
-                Statement stmt1 = con.createStatement();
-                ResultSet rs1 = stmt1.executeQuery(query1);
-
-
-                String query2 = "select * from dbo.users where password='" + userpassword;
-                Statement stmt2 = con.createStatement();
-                ResultSet rs2 = stmt2.executeQuery(query2);
-
-
-                Toast.makeText(getApplicationContext(), rs1 + "worked" +rs2,
-                        Toast.LENGTH_SHORT).show();
-
-            }
-
-        }catch (Exception e){
-
-        }
 
 
         }
